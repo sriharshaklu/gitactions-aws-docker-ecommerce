@@ -6,7 +6,7 @@
     RUN apt-get update && apt-get install -y git
     
     # Clone your backend repo
-    RUN git remote add origin https://github.com/sriharshaklu/docker-git-ecommerce-backend-main.git .
+    RUN git clone https://github.com/sriharshaklu/docker-git-ecommerce-backend-main.git .
     
     # Build the Spring Boot JAR (cache Maven dependencies for speed)
     RUN --mount=type=cache,target=/root/.m2 mvn clean install package -DskipTests
@@ -27,3 +27,4 @@
     ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
 
     
+
