@@ -1,4 +1,4 @@
-name: Deploys Ecommerce Fullstack App on EC2
+name: Deploy Ecommerce Fullstack App on EC2
 
 on:
   push:
